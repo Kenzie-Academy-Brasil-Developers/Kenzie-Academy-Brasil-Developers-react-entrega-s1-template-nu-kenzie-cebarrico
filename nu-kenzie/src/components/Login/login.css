@@ -1,0 +1,63 @@
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-grey-4);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  color: white;
+}
+
+.login {
+  width: 100%;
+  max-width: 347px;
+  color: white;
+}
+section {
+  width: 100%;
+  max-width: 598px;
+}
+.login-img {
+  width: 100%;
+}
+.login > h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 28px;
+}
+.login > p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+.btm-login {
+  background-color: var(--color-primary);
+  width: 241px;
+  height: 48px;
+  color: white;
+  cursor: pointer;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .App {
+    flex-direction: column;
+    gap: 30px;
+  }
+} ;
