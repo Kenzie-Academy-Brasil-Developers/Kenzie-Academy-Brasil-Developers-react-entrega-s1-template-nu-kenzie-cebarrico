@@ -14,7 +14,7 @@ export const Profile = ({
 }) => {
   return (
     <div className="app-2">
-      <header>
+      <header className="nav-header">
         <ProfileHeader setLoginIsTrue={setLoginIsTrue} />
       </header>
       <main className="container-profile ">
