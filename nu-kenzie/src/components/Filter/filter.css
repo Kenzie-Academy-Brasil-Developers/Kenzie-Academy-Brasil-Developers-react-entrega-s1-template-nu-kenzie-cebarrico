@@ -1,0 +1,40 @@
+.list-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-header h2 {
+  font-size: 18px;
+}
+
+.btm-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 40px;
+}
+
+.btm-container button {
+  padding: 5px 10px;
+  border: 1.4px solid var(--color-grey-2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btm-container button:focus {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .btm-container {
+    flex-direction: row;
+  }
+  .btm-container button {
+    padding: 10px 15px;
+    border: 1.4px solid var(--color-grey-2);
+    border-radius: 8px;
+  }
+}

@@ -1,19 +1,7 @@
 import { useState } from "react";
-import uuid from "react-uuid";
-import "./profile.css";
-import logo from "../../img/nukenzieb.svg";
-import trash from "../../img/trash.svg";
+import "./form.css";
 
-export const ProfileHeader = ({ setLoginIsTrue }) => {
-  return (
-    <nav>
-      <img src={logo} alt="" />
-      <button className="logout-btm" onClick={() => setLoginIsTrue(false)}>
-        Inicio
-      </button>
-    </nav>
-  );
-};
+import uuid from "react-uuid";
 
 export const FormMain = ({ setActivities }) => {
   const [id, setId] = useState("");
@@ -51,7 +39,7 @@ export const FormMain = ({ setActivities }) => {
         required
       />
       <p>Ex: Compra de roupas</p>
-      <div>
+      <div className="value-container">
         <div className="value">
           <label htmlFor="">Valor</label>
           <input
@@ -81,52 +69,5 @@ export const FormMain = ({ setActivities }) => {
         Inserir Valor
       </button>
     </form>
-  );
-};
-export const Balance = ({ calc }) => {
-  const [count, setCount] = useState(0);
-
-  const sum = calc.map((list) => {
-    if (list.entry === "Entrada") {
-      return Number(list.amount);
-    } else {
-      return 0;
-    }
-  });
-  const sub = calc.map((list) => {
-    if (list.entry === "Despesas") {
-      return Number(list.amount);
-    } else {
-      return 0;
-    }
-  });
-
-  let totalSum = sum.reduce((total, currentElemnt) => total + currentElemnt, 0);
-  let totalSub = sub.reduce(
-    (totalSum, currentElemnt) => totalSum - currentElemnt,
-    0
-  );
-  let realSum = totalSum + totalSub;
-
-  return (
-    <div className="balance">
-      <h2>Seu saldo é:</h2>
-      <p>
-        <span>R$</span> {realSum}
-      </p>
-    </div>
-  );
-};
-
-export const HeaderMain = ({ setListFilter }) => {
-  return (
-    <div className="list-header">
-      <h2>Resumo Fincanceiro</h2>
-      <div className="btm-container">
-        <button onClick={() => setListFilter("Todos")}>Todos</button>
-        <button onClick={() => setListFilter("Entrada")}>Entradas</button>
-        <button onClick={() => setListFilter("Despesas")}>Despesas</button>
-      </div>
-    </div>
   );
 };
