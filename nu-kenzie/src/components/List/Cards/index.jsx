@@ -1,6 +1,6 @@
 import trash from "../../../img/trash.svg";
 import "../cards.css";
-export const ListRender = ({ activity, removeList, index }) => {
+export const Cards = ({ activity, removeList, index }) => {
   return (
     <li id={activity.id} key={index} className={activity.entry}>
       <div>
