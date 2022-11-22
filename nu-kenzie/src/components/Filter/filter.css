@@ -1,8 +1,10 @@
 .list-header {
   display: flex;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+  gap: 10px;
 }
 
 .list-header h2 {
@@ -11,13 +13,12 @@
 
 .btm-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   gap: 3px;
-  margin-bottom: 40px;
 }
 
 .btm-container button {
-  padding: 5px 10px;
+  padding: 10px 15px;
   border: 1.4px solid var(--color-grey-2);
   border-radius: 8px;
   cursor: pointer;
@@ -28,9 +29,23 @@
   color: white;
 }
 
+.btm-container button:hover:not(:focus) {
+  background-color: var(--color-grey-3);
+}
+
 @media (min-width: 600px) {
-  .btm-container {
+  .list-header {
+    width: 100%;
+
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btm-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
   }
   .btm-container button {
     padding: 10px 15px;
