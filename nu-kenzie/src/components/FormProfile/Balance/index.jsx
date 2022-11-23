@@ -27,7 +27,10 @@ export const Balance = ({ calc }) => {
 
   return (
     <div className="balance">
-      <h2>Seu saldo é:</h2>
+      <div>
+        <h2>Seu saldo é:</h2>
+        <span>O valor se refere ao saldo</span>
+      </div>
       <p>
         <span>R$</span> {realSum}
       </p>

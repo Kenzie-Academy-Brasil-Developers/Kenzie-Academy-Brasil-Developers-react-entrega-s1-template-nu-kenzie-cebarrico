@@ -58,7 +58,7 @@ export const FormMain = ({
               <input
                 type="number"
                 value={amount}
-                onChange={(event) => setAmount(event.target.value)}
+                onChange={(event) => setAmount(event.target.value.split("-"))}
                 placeholder="1"
                 required
               />

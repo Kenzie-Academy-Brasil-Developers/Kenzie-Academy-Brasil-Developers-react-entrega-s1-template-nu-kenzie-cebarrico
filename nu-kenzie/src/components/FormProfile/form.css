@@ -113,6 +113,18 @@ form > div > span {
   max-width: 351px;
 }
 
+.balance > div > span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-grey-3);
+}
+
+.balance > p {
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
 @media (max-width: 400px) {
   .value-container {
     flex-direction: column;
